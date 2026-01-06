@@ -1,0 +1,4 @@
+format: jb-book
+root: content/index
+sections:
+  - file: content/python-basics

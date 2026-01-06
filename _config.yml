@@ -1,0 +1,17 @@
+title: "DataWizard 1 — ML made simple"
+author: "DataWizard"
+# Path to a small logo shown in the header (replace `assets/logo.svg` with your logo file if you have one)
+html_logo: "assets/logo.svg"
+
+# Include custom CSS under _static/ to override fonts and small visual tweaks
+extra_css:
+  - "_static/custom.css"
+execute:
+  execute_notebooks: "off"
+
+# MyST/Sphinx options: enable amsmath support for advanced math if needed
+myst:
+  enable_extensions:
+    - amsmath
+
+# Keep defaults for MathJax (Jupyter Book uses MathJax for HTML builds)

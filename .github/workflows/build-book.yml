@@ -1,0 +1,68 @@
+name: Build Jupyter Book
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Cache pip
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.OS }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.OS }}-pip-
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install jupyter-book myst-parser sphinx-book-theme; fi
+
+    - name: Build Jupyter Book
+      run: |
+        jupyter-book build .
+
+    - name: Smoke-test built site
+      run: |
+        # Fail early if the build didn't produce an index.html or it's empty
+        if [ ! -s _build/html/index.html ]; then
+          echo "ERROR: _build/html/index.html is missing or empty" >&2
+          ls -la _build/html || true
+          exit 1
+        fi
+        echo "Smoke test passed: index.html exists and is non-empty"
+
+    - name: Copy built site to docs/
+      run: |
+        rm -rf docs || true
+        mkdir -p docs
+        cp -a _build/html/. docs/
+
+    - name: Commit docs to branch
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add docs
+        # Use a message that avoids re-triggering the workflow
+        if git diff --staged --quiet; then
+          echo "No changes to docs"
+        else
+          git commit -m "chore(site): update docs from Jupyter Book [skip ci]"
+          git push origin HEAD:main
+        fi

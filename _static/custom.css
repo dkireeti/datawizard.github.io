@@ -1,0 +1,29 @@
+/* Custom CSS for DataWizard: import a Google Font and style the site title */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+/* Apply the Montserrat font to the main site title and nav-brand */
+.project-name,
+.book-title,
+.navbar-brand,
+header h1,
+.wy-side-nav-top h1 {
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-weight: 700;
+}
+
+/* Slightly increase logo size in the navbar */
+.book-logo img, .navbar-brand img {
+  height: 36px;
+}
+
+/* Make sure the top-left header elements align nicely */
+.wy-side-nav-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Small responsive tweak: reduce title size on small screens */
+@media (max-width: 600px) {
+  .project-name, .book-title { font-size: 1.05rem; }
+}
