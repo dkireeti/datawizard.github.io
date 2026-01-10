@@ -34,26 +34,20 @@ jobs:
 
     - name: Build Jupyter Book
       run: |
-        # Build the HTML site using the modern myst.yml configuration.
-        # Do NOT pass a positional path (like '.') because some jupyter-book
-        # versions attempt to read positional args as files and may error.
-        # We run the build in the repo root and let the CLI discover myst.yml.
-        jupyter-book build --site --ci
+        # Build using classic Jupyter Book format (_config.yml + _toc.yml)
+        # Remove myst.yml to prevent the modern site build
+        rm -f myst.yml
+        # Build from repo root, jupyter-book discovers _config.yml automatically
+        jupyter-book build --keep-going
 
     - name: Smoke-test built site
       run: |
-        # The output directory can be either _build/html (classic) or
-        # _build/site/public (newer MyST site). Check both and fail if
-        # neither contains a non-empty index.html.
+        # Check for the classic Jupyter Book build output at _build/html
         if [ -s _build/html/index.html ]; then
-          echo "Found classic build at _build/html/index.html"
+          echo "✓ Found built site at _build/html/index.html"
           exit 0
         fi
-        if [ -s _build/site/public/index.html ]; then
-          echo "Found site build at _build/site/public/index.html"
-          exit 0
-        fi
-        echo "ERROR: No built index.html found in _build/html or _build/site/public" >&2
+        echo "ERROR: No built index.html found at _build/html/index.html" >&2
         ls -la _build || true
         exit 1
 
@@ -61,16 +55,8 @@ jobs:
       run: |
         rm -rf docs || true
         mkdir -p docs
-        # Prefer the classic _build/html, fall back to the site public build
-        if [ -d _build/html ]; then
-          cp -a _build/html/. docs/
-        elif [ -d _build/site/public ]; then
-          cp -a _build/site/public/. docs/
-        else
-          echo "No build output to copy" >&2
-          ls -la _build || true
-          exit 1
-        fi
+        # Copy the classic build output to docs/
+        cp -a _build/html/. docs/
 
     - name: Commit docs to branch
       env:
