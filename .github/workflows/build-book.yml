@@ -83,6 +83,9 @@ EOF
           echo "ERROR: No site output to copy" >&2
           exit 1
         fi
+        # Add .nojekyll to prevent GitHub Pages from processing with Jekyll
+        touch docs/.nojekyll
+        echo "✓ Created .nojekyll to disable Jekyll processing"
 
     - name: Commit docs to branch
       env:
