@@ -34,11 +34,11 @@ jobs:
 
     - name: Build Jupyter Book
       run: |
-        # Build the HTML site explicitly and select the HTML export/builder.
+        # Build the HTML site using the modern myst.yml configuration.
         # Do NOT pass a positional path (like '.') because some jupyter-book
         # versions attempt to read positional args as files and may error.
-        # We run the build in the repo root and let the CLI discover _toc.yml/myst.yml.
-        jupyter-book build --builder html --site --ci
+        # We run the build in the repo root and let the CLI discover myst.yml.
+        jupyter-book build --site --ci
 
     - name: Smoke-test built site
       run: |
