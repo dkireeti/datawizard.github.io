@@ -1,4 +1,4 @@
-## Curriculum
+# ML Curriculum
 
 Here's a comprehensive ML curriculum structured from absolute basics to advanced topics, with clear prerequisites for each section. This is designed for a workshop/series format.
 

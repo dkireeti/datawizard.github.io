@@ -1,0 +1,9 @@
+{# Custom navbar with site title #}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="navbar-brand">
+    {% if logo %}
+      <img src="{{ logo }}" alt="Logo" class="navbar-logo">
+    {% endif %}
+    <span class="navbar-title">Data Wizard</span>
+  </div>
+</nav>

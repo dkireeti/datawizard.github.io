@@ -27,3 +27,71 @@ header h1,
 @media (max-width: 600px) {
   .project-name, .book-title { font-size: 1.05rem; }
 }
+
+/* Show the project name in the top navigation */
+.navbar-brand,
+.site-navigation-item,
+.topbar-logo,
+.header-title {
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Add the project name after logo if navbar-brand exists */
+.navbar-brand::after {
+  content: "Data Wizard";
+  margin-left: 0.75rem;
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-color, #333);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Override the sr-only span in myst-home-link to show "Data Wizard" instead of "Made with MyST" */
+.myst-home-link span.sr-only {
+  position: relative;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  content: "Data Wizard";
+}
+
+.myst-home-link span.sr-only::before {
+  content: "Data Wizard";
+  display: inline;
+  margin-left: 0.5rem;
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: inherit;
+}
+
+/* If the theme uses a different header element, target it */
+.site-name::before,
+.top-header::before {
+  content: "Data Wizard";
+  display: block;
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Fallback: ensure nav header is visible */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Hide on very small screens to preserve space */
+@media (max-width: 420px) {
+  .navbar-brand::after,
+  .site-name::before,
+  .top-header::before { 
+    display: none; 
+  }
+}

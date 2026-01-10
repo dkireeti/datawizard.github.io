@@ -1,7 +1,8 @@
-title: "DataWizard 1 — ML made simple"
-author: "DataWizard"
+title: "Testing DataWizard"
+html_title: "Data Wizard"
+author: "dkireeti"
 # Path to a small logo shown in the header (replace `assets/logo.svg` with your logo file if you have one)
-html_logo: "assets/logo.svg"
+html_logo: "my_logo.svg"
 
 # Include custom CSS under _static/ to override fonts and small visual tweaks
 extra_css:
@@ -14,4 +15,12 @@ myst:
   enable_extensions:
     - amsmath
 
+# Theme options: override small site chrome pieces from the theme.
+# `primary_sidebar_footer` replaces the default "Made with MyST" string in
+# recent myst/jupyter-book themes.
+html_theme_options:
+  primary_sidebar_header: "Data Wizard"
+  primary_sidebar_footer: "Data Wizard"
+  # site-wide footer (kept simple)
+  footer: "Data Wizard"
 # Keep defaults for MathJax (Jupyter Book uses MathJax for HTML builds)

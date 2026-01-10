@@ -1,4 +1,7 @@
 format: jb-book
 root: content/index
+title: Wizardly
 sections:
-  - file: content/python-basics
+  - file: content/ml/carriculum
+  - file: content/python/basics
+  

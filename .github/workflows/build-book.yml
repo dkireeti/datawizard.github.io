@@ -34,23 +34,43 @@ jobs:
 
     - name: Build Jupyter Book
       run: |
-        jupyter-book build .
+        # Build the HTML site explicitly and select the HTML export/builder.
+        # Do NOT pass a positional path (like '.') because some jupyter-book
+        # versions attempt to read positional args as files and may error.
+        # We run the build in the repo root and let the CLI discover _toc.yml/myst.yml.
+        jupyter-book build --builder html --site --ci
 
     - name: Smoke-test built site
       run: |
-        # Fail early if the build didn't produce an index.html or it's empty
-        if [ ! -s _build/html/index.html ]; then
-          echo "ERROR: _build/html/index.html is missing or empty" >&2
-          ls -la _build/html || true
-          exit 1
+        # The output directory can be either _build/html (classic) or
+        # _build/site/public (newer MyST site). Check both and fail if
+        # neither contains a non-empty index.html.
+        if [ -s _build/html/index.html ]; then
+          echo "Found classic build at _build/html/index.html"
+          exit 0
         fi
-        echo "Smoke test passed: index.html exists and is non-empty"
+        if [ -s _build/site/public/index.html ]; then
+          echo "Found site build at _build/site/public/index.html"
+          exit 0
+        fi
+        echo "ERROR: No built index.html found in _build/html or _build/site/public" >&2
+        ls -la _build || true
+        exit 1
 
     - name: Copy built site to docs/
       run: |
         rm -rf docs || true
         mkdir -p docs
-        cp -a _build/html/. docs/
+        # Prefer the classic _build/html, fall back to the site public build
+        if [ -d _build/html ]; then
+          cp -a _build/html/. docs/
+        elif [ -d _build/site/public ]; then
+          cp -a _build/site/public/. docs/
+        else
+          echo "No build output to copy" >&2
+          ls -la _build || true
+          exit 1
+        fi
 
     - name: Commit docs to branch
       env:

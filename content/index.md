@@ -1,10 +1,22 @@
-# DataWizard — ML made simple
+# Wizardly
 
-Welcome to the DataWizard course materials. This site will host short, focused notebooks and pages that follow the curriculum in `Carriculum.md`.
+## Hard Things Made Simple
 
-Start here:
+Welcome to the Wizardly. This site will host short, focused pages & notebooks, that helps users to understand any topic with deeper insight in intutive way.
 
-- [Python basics](python-basics)
-- [Curriculum](../Carriculum.md)
+## Start here:
 
-This book uses MathJax for rendering math. You can author math inline with $...$ or as display math with $$...$$. Labeled equations use the MyST `{math}` directive.
+### Machine Learning
+- [ML Curriculum](ml/carriculum)
+
+### Python
+- [Python Basics](python/basics)
+
+### Java Script
+- To be Updated.
+
+### React
+- To be Updated.
+
+### Mathematics
+- To be updated.

@@ -9,7 +9,8 @@ Install the build dependencies and create the HTML site locally with Jupyter Boo
 
 ```bash
 pip install -r requirements.txt
-jupyter-book build .
+# Build the HTML site (explicitly select the HTML builder/export):
+jupyter-book build . --builder html --site
 ```
 
 The built site will be placed under `_build/html` by default. We'll add a CI workflow to publish the site to `docs/` for GitHub Pages in a later step.
