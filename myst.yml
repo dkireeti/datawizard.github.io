@@ -1,44 +1,22 @@
-version: 1version: 1
-
-site:site:
-
-  template: book-theme  template: book-theme
-
-  title: "Wizardly"  title: "Wizardly"
-
-  options:  options:
-
-    logo: my_logo.png    logo: my_logo.png
-
-    logo_text: "Wizardly"    logo_text: "Wizardly"
-
-    extra_css:    extra_css:
-
-      - "_static/custom.css"      - "_static/custom.css"
-
-toc:toc:
-
-  format: jb-book  format: jb-book
-
-  root: content/index  root: content/index
-
-  title: Wizardly  title: Wizardly
-
-  sections:  sections:
-
-    - file: content/ml/carriculum    - file: content/ml/carriculum
-
-    - file: content/python/basics    - file: content/python/basics
-
-project:project:
-
-  github: https://github.com/dkireeti/datawizard.github.io  github: https://github.com/dkireeti/datawizard.github.io
-
-  id: 05248b57-54a7-4af0-aaf1-3819727123ba  id: 05248b57-54a7-4af0-aaf1-3819727123ba
-
-  title: "Wizardly"  title: "Wizardly"
-
-  options:  options:
-
-     logo: my_logo.png     logo: my_logo.png
-
+version: 1
+site:
+  template: book-theme
+  title: "Wizardly"
+  options:
+    logo: my_logo.png
+    logo_text: "Wizardly"
+    extra_css:
+      - "_static/custom.css"
+toc:
+  format: jb-book
+  root: content/index
+  title: Wizardly
+  sections:
+    - file: content/ml/carriculum
+    - file: content/python/basics
+project:
+  github: https://github.com/dkireeti/datawizard.github.io
+  id: 05248b57-54a7-4af0-aaf1-3819727123ba
+  title: "Wizardly"
+  options:
+    logo: my_logo.png
