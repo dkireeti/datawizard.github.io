@@ -3,5 +3,21 @@ root: content/index
 title: Wizardly
 sections:
   - file: content/ml/carriculum
+  - file: content/ml/introduction
   - file: content/python/basics
-  
+  # - file: content/python/data-structures
+  # - file: content/python/functions
+  # - file: content/python/modules-packages
+  # - file: content/python/file-handling
+  # - file: content/python/error-handling
+  # - file: content/python/oop
+  # - file: content/python/standard-libraries
+  # - file: content/python/comprehensions
+  # - file: content/python/advanced-topics
+  # - file: content/python/testing
+  # - file: content/python/virtual-environments
+  # - file: content/python/decorators
+  # - file: content/python/generators-iterators
+  - file: notebooks/python_data_types.ipynb
+  - file: notebooks/python_flow_control.ipynb
+  - file: notebooks/python_functions.ipynb
