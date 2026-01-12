@@ -5,9 +5,9 @@ This page covers minimal, hands-on Python essentials we'll use throughout the co
 ## Resources
 - [Python3/tutorial](https://docs.python.org/3/tutorial/introduction.html)
 
-## Goals
+## Goal
 
-- Understand variables and basic data types (numbers, strings, booleans)
+- To understand variables and basic data types (numbers, strings, booleans)
 - Work with lists and dictionaries
 - Use NumPy for vectorized operations
 - Create a tiny Pandas DataFrame
