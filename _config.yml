@@ -3,6 +3,7 @@ html_title: "Data Wizard"
 author: "dkireeti"
 # Path to a small logo shown in the header (replace `assets/logo.svg` with your logo file if you have one)
 html_logo: "my_logo.svg"
+hide_search: true
 
 # Include custom CSS under _static/ to override fonts and small visual tweaks
 extra_css:

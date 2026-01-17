@@ -21,3 +21,4 @@ sections:
   - file: notebooks/python_data_types.ipynb
   - file: notebooks/python_flow_control.ipynb
   - file: notebooks/python_functions.ipynb
+  - file: notebooks/python_pandas.ipynb

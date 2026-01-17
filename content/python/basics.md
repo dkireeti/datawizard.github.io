@@ -1,6 +1,6 @@
 # Python Basics
 
-This page covers minimal, hands-on Python essentials we'll use throughout the course. It's designed to be short and executable in the accompanying notebook `notebooks/python_basics.ipynb`.
+This page covers minimal, hands-on Python essentials for ML. It's designed to be short intutibe and executable in the accompanying notebook `notebooks/python_basics.ipynb`.
 
 ## Resources
 - [Python3/tutorial](https://docs.python.org/3/tutorial/introduction.html)
