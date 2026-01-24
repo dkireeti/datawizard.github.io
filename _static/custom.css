@@ -28,6 +28,13 @@ header h1,
   .project-name, .book-title { font-size: 1.05rem; }
 }
 
+.article dd img,.article p img,.article table img{
+  margin: 0;
+  display: inline-block;
+  max-height: fit-content !important;
+  vertical-align: text-bottom
+}
+
 /* Show the project name in the top navigation */
 .navbar-brand,
 .site-navigation-item,

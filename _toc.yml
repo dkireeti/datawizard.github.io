@@ -2,8 +2,9 @@ format: jb-book
 root: content/index
 title: Wizardly
 sections:
+  - file: content/ai_vs_ml
+  - file: content/ml/ml_introduction
   - file: content/ml/carriculum
-  - file: content/ml/introduction
   - file: content/python/basics
   # - file: content/python/data-structures
   # - file: content/python/functions
