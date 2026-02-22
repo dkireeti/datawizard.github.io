@@ -82,10 +82,12 @@ Now comes the interesting part - how we use these K neighbors to make our predic
   - Point (9,9) is Blue
 - We want to predict the color of a new point X at (7,7)
 - We decide K = 3 (look at 3 nearest neighbors)
+- **Distance Metric Used**: Euclidean Distance (straight-line distance between two points)
+  - Formula: $ d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} $
 
 **What happens:**
 
-1. **Calculate Distances**: We measure how far (7,7) is from each point:
+1. **Calculate Distances**: We measure how far (7,7) is from each point using Euclidean distance:
    - Distance to (2,2) = 7.07 units away → Red
    - Distance to (3,3) = 5.66 units away → Red
    - Distance to (8,8) = 1.41 units away → Blue
@@ -113,10 +115,12 @@ Now comes the interesting part - how we use these K neighbors to make our predic
   - When input is 9, output is 18
 - We want to predict the output for a new input X = 7
 - We decide K = 3 (use 3 nearest neighbors)
+- **Distance Metric Used**: Euclidean Distance (in 1D, this simplifies to absolute difference)
+  - Formula: $ d = |x_2 - x_1| $
 
 **What happens:**
 
-1. **Calculate Distances**: We measure how far 7 is from each input:
+1. **Calculate Distances**: We measure how far 7 is from each input using Euclidean distance:
    - Distance to 2 = 5 units → output value is 4
    - Distance to 3 = 4 units → output value is 5
    - Distance to 8 = 1 unit → output value is 16
