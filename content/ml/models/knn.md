@@ -3,6 +3,7 @@
 ## Resources
 - [k-nearest-neighbor](https://medium.com/swlh/k-nearest-neighbor-ca2593d7a3c4)
 - [Model Code](_)
+- [KNN](https://medium.com/swlh/k-nearest-neighbor-ca2593d7a3c4)
 
 ## Goal
 To understand and use KNN for supervised learning.
