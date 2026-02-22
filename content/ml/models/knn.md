@@ -4,6 +4,7 @@
 - [k-nearest-neighbor](https://medium.com/swlh/k-nearest-neighbor-ca2593d7a3c4)
 - [Model Code](_)
 - [KNN](https://medium.com/swlh/k-nearest-neighbor-ca2593d7a3c4)
+- [KNN](https://neptune.ai/blog/knn-algorithm)
 
 ## Goal
 To understand and use KNN for supervised learning.
@@ -32,7 +33,7 @@ To understand and use KNN for supervised learning.
 - by now,there should be a open question ? Ok, we are calculation the distance of the data points, but how many points to be considered ?, this is K - a hyperparam.
 
 ## How to Calculate Distance ?
-- [Points & Distance](distance)
+- [Points & Distance](/distance)
 
 ## Algo & Sudo Code
 - KNN identifies the K closest data points based on distance. Each point is assigned to a specific group if it falls close enough to that group’s perimeter.

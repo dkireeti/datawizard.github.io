@@ -9,7 +9,7 @@ To understand and implement mutiple evaliation methods like accuracy,precision a
 - [AUC and the ROC Curve](https://www.datacamp.com/tutorial/auc?utm_cid=19589720824&utm_aid=157098106975&utm_campaign=230119_1-ps-other~dsa-tofu~all_2-b2c_3-apac_4-prc_5-na_6-na_7-le_8-pdsh-go_9-nb-e_10-na_11-na&utm_loc=9183250-&utm_mtd=-c&utm_kw=&utm_source=google&utm_medium=paid_search&utm_content=ps-other~apac-en~dsa~tofu~tutorial~data-analysis&gad_source=1&gad_campaignid=19589720824&gbraid=0AAAAADQ9WsFSCFF92-kFNHmHbJ-UnasL4&gclid=CjwKCAiA-sXMBhAOEiwAGGw6LPQimsBoSONUqUFw13LSfY1fNbWXpFZkc51ik6o-J_-n9MAB8txiORoCTVQQAvD_BwE)
 
 
-## Why we need to evalueate a model ?
+## Why we need to evaluate a model ?
 - To Measure Performance and Fitness for Purpose: is this model any good ?
 - To Enable Model Selection: we can experiment with other params and select the best one.
 - To Estimate How Well the Model Will Generalize: since model has to work for the new data, it needs to generalize better.
