@@ -1,4 +1,4 @@
-# Precision vs Recall: A Detailed Comparison
+# ML - Precision vs Recall
 
 ## Overview
 Precision and Recall are two critical metrics that often work in opposition. Understanding when to prioritize each is essential for building effective classification models.

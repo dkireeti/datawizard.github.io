@@ -1,4 +1,4 @@
-# Machine Learning Introduction
+# ML - Introduction
 
 ## Resources
 - Online Courses:

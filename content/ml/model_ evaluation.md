@@ -1,4 +1,4 @@
-# Models Evaluation
+# ML - Models Evaluation
 
 ## Goal
 To understand and implement mutiple evaliation methods like accuracy,precision and recall to evalaute a classification model.

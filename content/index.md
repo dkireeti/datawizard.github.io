@@ -33,4 +33,4 @@ Site exposes pages, each page will have
 - To be Updated.
 
 ### Mathematics
-- To be updated.
+- [Points and Distance](math/distance.ipynb).

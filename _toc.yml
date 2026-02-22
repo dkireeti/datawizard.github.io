@@ -3,12 +3,16 @@ root: content/index
 title: Wizardly
 sections:
   - file: content/ai_vs_ml
-  - file: content/ml/ml_introduction
   - file: content/ml/carriculum
+  - file: content/ml/ml_introduction
   - file: content/ml/model_ evaluation
   - file: content/ml/precision_vs_recall
+  - file: content/math/distance.ipynb
+  - file: content/ml/models/knn
+  - file: content/ml/ml_lingo
   - file: content/python/basics
   - file: notebooks/python_data_types.ipynb
   - file: notebooks/python_flow_control.ipynb
   - file: notebooks/python_functions.ipynb
   - file: notebooks/python_pandas.ipynb
+  

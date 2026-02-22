@@ -15,6 +15,7 @@ toc:
   sections:
     - file: content/ml/carriculum
     - file: content/python/basics
+    - file: content/math/distance
 project:
   github: https://github.com/dkireeti/datawizard.github.io
   id: 05248b57-54a7-4af0-aaf1-3819727123ba
